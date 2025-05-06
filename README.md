@@ -10,5 +10,19 @@ bird = Bird("bird.png")
 to the image path.
 
 Haven't used images for the bird, pipes, and the sky. The bird has static movement as a circle.
-
 Uses collections.deque module, to optimize the FIFO module.
+
+Important:
+You need to have pygame installed. You can go to terminal and do
+pip install pygame (Make sure you have Python installed)
+
+or
+
+1. You can create a venv by typing this in terminal
+python -m venv venv
+2. Then you want to activate the venv
+venv\Scripts\activate
+3. Lastly you can install the pygame with the same version as mine
+pip install pygame==2.6.1
+4. Then you can run the script
+python {filename}.py
