@@ -31,5 +31,6 @@ flappy-bird/
 │
 ├── main.py                 # File utama game
 ├── highscore.txt           # (Otomatis dibuat di APPDATA)
+├── requirements.txt        # Library yang diperlukan
 └── README.md
 ```
