@@ -21,5 +21,5 @@ All notable changes to this project will be documented in this file.
 - "Zen Flapper": "Score 3 with 10 flaps or less."
 - "Nyepi Silence": "Survive for 1 second without flapping."
 
-## [1.0.0] - 2025-06-04
+## [1.0] - 2025-06-04
 - Initial release of the game.
