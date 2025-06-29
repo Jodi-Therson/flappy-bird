@@ -41,3 +41,6 @@ Jika ingin membungkus game ini menjadi .exe, jalankan command ini di terminal (K
 ```
 pyinstaller --onefile --windowed --add-data "img;img" --add-data "sound;sound" main.py
 ```
+
+## Changelog
+Untuk riwayat lengkap perubahan dan pembaruan proyek, silakan lihat file [CHANGELOG.md](CHANGELOG.md).
