@@ -14,31 +14,32 @@ python main.py
 ```
 flappy-bird/
 ├── dist/                  # Folder aplikasi
-│   ├── Flappy Bird.exe
+│   ├── Flappy Bird.exe     # Versi 1.1
+│   └── main.exe            # Versi 1.0
 │
 ├── img/                    # Folder aset gambar
-│   ├── bird1.png
-│   ├── bird2.png
-│   ├── bird3.png
+│   ├── bg.png
+│   ├── bird_asli1.png
+│   ├── bird_asli2.png
+│   ├── bird_asli3.png
 │   ├── bird_blue1.png
 │   ├── bird_blue2.png
 │   ├── bird_blue3.png
 │   ├── bird_red1.png
 │   ├── bird_red2.png
 │   ├── bird_red3.png
-│   ├── bird_green1.png
-│   ├── bird_green2.png
-│   ├── bird_green3.png
-│   ├── bg.png
+│   ├── bird1.png
+│   ├── bird2.png
+│   ├── bird3.png
 │   ├── ground.png
 │   ├── pipe.png
 │   └── restart.png
 │
 ├── sound/                  # Folder aset suara
-│   ├── sfx_wing.mp3
+│   ├── crash.mp3
 │   ├── sfx_point.mp3
 │   ├── sfx_pop.mp3
-│   └── crash.mp3
+│   └── sfx_wing.mp3
 │
 ├── main.py                 # File utama game
 ├── highscore.txt           # (Otomatis dibuat di APPDATA)
