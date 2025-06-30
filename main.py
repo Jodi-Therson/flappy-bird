@@ -188,7 +188,7 @@ class Bird(pg.sprite.Sprite):
             "default": [pg.image.load(resource_path(f'img/bird{n}.png')) for n in range(1, 4)],
             "red": [pg.image.load(resource_path(f'img/bird_red{n}.png')) for n in range(1, 4)],
             "blue": [pg.image.load(resource_path(f'img/bird_blue{n}.png')) for n in range(1, 4)],
-            "tf": [pg.image.load(resource_path(f'img/bird_tf{n}.png')) for n in range(1, 4)]
+            "asli": [pg.image.load(resource_path(f'img/bird_asli{n}.png')) for n in range(1, 4)]
         }
         self.images = self.skins["default"]
         self.index = 0
@@ -413,7 +413,7 @@ while run:
                 elif bird_tier == 2 and score >= 50:
                     create_powerup_effect(flappy.rect.centerx, flappy.rect.centery)
                     powerup_sfx.play()
-                    flappy.change_skin("tf")
+                    flappy.change_skin("asli")
                     bird_tier = 3
 
         # Nyepi
