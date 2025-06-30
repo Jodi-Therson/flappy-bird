@@ -46,6 +46,7 @@ point_sfx = pg.mixer.Sound(resource_path('sound/sfx_point.mp3'))
 crash_sfx = pg.mixer.Sound(resource_path('sound/crash.mp3'))
 powerup_sfx = pg.mixer.Sound(resource_path('sound/sfx_pop.mp3'))
 
+
 clock = pg.time.Clock()
 FPS = 60
 WIDTH = 864
@@ -187,7 +188,7 @@ class Bird(pg.sprite.Sprite):
             "default": [pg.image.load(resource_path(f'img/bird{n}.png')) for n in range(1, 4)],
             "red": [pg.image.load(resource_path(f'img/bird_red{n}.png')) for n in range(1, 4)],
             "blue": [pg.image.load(resource_path(f'img/bird_blue{n}.png')) for n in range(1, 4)],
-            "green": [pg.image.load(resource_path(f'img/bird_green{n}.png')) for n in range(1, 4)]
+            "tf": [pg.image.load(resource_path(f'img/bird_tf{n}.png')) for n in range(1, 4)]
         }
         self.images = self.skins["default"]
         self.index = 0
@@ -388,7 +389,6 @@ while run:
         if len(pipe_queue) > 0:
             next_top, next_btm = pipe_queue[0]
             if flappy.rect.left > next_top.rect.right:
-                # Close Shave
                 if abs(flappy.rect.top - next_top.rect.bottom) < 10 or abs(flappy.rect.bottom - next_btm.rect.top) < 10:
                     unlock_event_achievement("close_shave")
                 score += 1
@@ -409,15 +409,14 @@ while run:
                 elif bird_tier == 2 and score >= 50:
                     create_powerup_effect(flappy.rect.centerx, flappy.rect.centery)
                     powerup_sfx.play()
-                    flappy.change_skin("green")
+                    flappy.change_skin("tf")
                     bird_tier = 3
 
         # Nyepi
-        if pg.time.get_ticks() - time_of_last_flap > 1000:
+        if pg.time.get_ticks() - time_of_last_flap > 1500:
             unlock_event_achievement("nyepi")
 
         if pg.sprite.groupcollide(bird_group, pipe_group, False, False) or flappy.rect.top < 0:
-            # Icarus
             if flappy.rect.top < 0:
                 unlock_event_achievement("icarus")
             game_state = "game_over"
