@@ -358,6 +358,10 @@ while run:
     clock.tick(FPS)
     screen.blit(bg, (0, 0))
 
+    bg_overlay = pg.Surface((WIDTH, HEIGHT), pg.SRCALPHA)
+    bg_overlay.fill((0, 0, 0, 75))
+    screen.blit(bg_overlay, (0,0))
+
     bird_group.draw(screen)
     pipe_group.draw(screen)
     explosion_group.draw(screen)
